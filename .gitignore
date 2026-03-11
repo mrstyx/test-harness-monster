@@ -1,0 +1,20 @@
+# Build outputs
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+
+# Visual Studio / Rider files
+.vs/
+.idea/
+*.user
+*.suo
+
+# Test results
+TestResults/
+
+# OS files
+.DS_Store
+Thumbs.db
