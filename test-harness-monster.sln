@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatbotHarness", "src\ChatbotHarness\ChatbotHarness.csproj", "{E2BFA1B5-5DAF-4C21-88F1-9B8A56B4C7B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatbotHarness.Tests", "tests\ChatbotHarness.Tests\ChatbotHarness.Tests.csproj", "{3C9E1E58-8B93-4B8F-8C1D-23D1B9E7E3E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2BFA1B5-5DAF-4C21-88F1-9B8A56B4C7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BFA1B5-5DAF-4C21-88F1-9B8A56B4C7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BFA1B5-5DAF-4C21-88F1-9B8A56B4C7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BFA1B5-5DAF-4C21-88F1-9B8A56B4C7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9E1E58-8B93-4B8F-8C1D-23D1B9E7E3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9E1E58-8B93-4B8F-8C1D-23D1B9E7E3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9E1E58-8B93-4B8F-8C1D-23D1B9E7E3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9E1E58-8B93-4B8F-8C1D-23D1B9E7E3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

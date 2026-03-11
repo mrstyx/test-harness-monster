@@ -1,2 +1,58 @@
 # test-harness-monster
-attempting to create an LLM test harness for my little chatbot
+
+A minimal proof-of-concept C# chatbot test harness using [Semantic Kernel](https://github.com/microsoft/semantic-kernel) and xUnit, targeting Azure OpenAI.
+
+## Project structure
+
+```
+test-harness-monster.sln
+src/
+  ChatbotHarness/          # Library — AzureOpenAiChatbot wrapper
+tests/
+  ChatbotHarness.Tests/    # xUnit integration tests (20 generic questions)
+```
+
+## Prerequisites
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- An Azure OpenAI resource with a chat-completion deployment
+
+## Configuration
+
+Set the following environment variables before running the integration tests:
+
+| Variable | Description |
+|---|---|
+| `AZURE_OPENAI_ENDPOINT` | Your Azure OpenAI endpoint, e.g. `https://YOUR-RESOURCE.openai.azure.com/` |
+| `AZURE_OPENAI_API_KEY` | Your Azure OpenAI API key |
+| `AZURE_OPENAI_CHAT_DEPLOYMENT` | The deployment name for your chat model, e.g. `gpt-4o-mini` |
+
+**Linux / macOS**
+
+```bash
+export AZURE_OPENAI_ENDPOINT="https://YOUR-RESOURCE.openai.azure.com/"
+export AZURE_OPENAI_API_KEY="your-api-key"
+export AZURE_OPENAI_CHAT_DEPLOYMENT="gpt-4o-mini"
+```
+
+**Windows (PowerShell)**
+
+```powershell
+$env:AZURE_OPENAI_ENDPOINT  = "https://YOUR-RESOURCE.openai.azure.com/"
+$env:AZURE_OPENAI_API_KEY   = "your-api-key"
+$env:AZURE_OPENAI_CHAT_DEPLOYMENT = "gpt-4o-mini"
+```
+
+## Building
+
+```bash
+dotnet build test-harness-monster.sln
+```
+
+## Running integration tests
+
+```bash
+dotnet test --filter "Category=Integration"
+```
+
+Tests are automatically **skipped** (not failed) when the environment variables above are not set, so the suite is always safe to run in a vanilla CI environment without Azure credentials.
